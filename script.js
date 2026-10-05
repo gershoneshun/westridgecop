@@ -341,11 +341,11 @@
   if (!btns.length) return;
   function upd(){
     var now = new Date(), day = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
-    var live = (day === 0 && m >= 580 && m < 690);
+    var live = (day === 0 && m >= 570 && m < 690);
     btns.forEach(function(b){
       b.disabled = !live;
       b.classList.toggle("is-live", live);
-      b.setAttribute("aria-label", live ? "Watch the service live now" : "Live on Sundays, 9:40 to 11:30 AM");
+      b.setAttribute("aria-label", live ? "Watch the service live now" : "Live on Sundays, 9:30 to 11:30 AM");
       var t = b.querySelector(".wb-text");
       if (t) t.textContent = live ? "Watch Live" : "Watch";
     });
