@@ -142,6 +142,10 @@
   document.querySelectorAll("[data-modal]").forEach(function(btn){
     function open(){ var m = document.getElementById(btn.getAttribute("data-modal")); if (m) openModal(m); }
     btn.addEventListener("click", open);
+    var tmoved = false;
+    btn.addEventListener("touchstart", function(){ tmoved = false; }, { passive: true });
+    btn.addEventListener("touchmove", function(){ tmoved = true; }, { passive: true });
+    btn.addEventListener("touchend", function(e){ if (tmoved) return; if (e.cancelable) e.preventDefault(); open(); }, { passive: false });
     if (btn.tagName !== "BUTTON"){
       btn.addEventListener("keydown", function(e){ if (e.key === "Enter" || e.key === " "){ e.preventDefault(); open(); } });
     }
@@ -181,6 +185,10 @@
   }
   tabs.forEach(function(t, i){
     t.addEventListener("click", function(){ activate(t.getAttribute("data-team")); });
+    var tmoved2 = false;
+    t.addEventListener("touchstart", function(){ tmoved2 = false; }, { passive: true });
+    t.addEventListener("touchmove", function(){ tmoved2 = true; }, { passive: true });
+    t.addEventListener("touchend", function(e){ if (tmoved2) return; if (e.cancelable) e.preventDefault(); activate(t.getAttribute("data-team")); }, { passive: false });
     t.addEventListener("keydown", function(e){
       var next = null;
       if (e.key === "ArrowRight" || e.key === "ArrowDown") next = tabs[(i + 1) % tabs.length];
