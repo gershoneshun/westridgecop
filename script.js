@@ -99,7 +99,14 @@
     document.body.classList.toggle("nav-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
   }
-  toggle.addEventListener("click", function(){ setMenu(!links.classList.contains("open")); });
+  (function(){
+    var tmoved = false;
+    function flip(){ setMenu(!links.classList.contains("open")); }
+    toggle.addEventListener("touchstart", function(){ tmoved = false; }, { passive: true });
+    toggle.addEventListener("touchmove", function(){ tmoved = true; }, { passive: true });
+    toggle.addEventListener("touchend", function(e){ if (tmoved) return; if (e.cancelable) e.preventDefault(); flip(); });
+    toggle.addEventListener("click", flip);
+  })();
   if (scrim) scrim.addEventListener("click", function(){ setMenu(false); });
   links.addEventListener("click", function(e){ if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", function(e){ if (e.key === "Escape" && links.classList.contains("open")) setMenu(false); });
