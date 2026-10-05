@@ -259,3 +259,90 @@
     a.addEventListener("click", function(e){ e.preventDefault(); downloadPdf(a.getAttribute("href"), a.getAttribute("download")); });
   });
 })();
+
+/* Watch: YouTube live player modal */
+(function(){
+  var modal = document.getElementById("watchModal");
+  if (!modal) return;
+  var player = document.getElementById("watchPlayer");
+  var frame = modal.querySelector(".watch-frame");
+  var fullBtn = document.getElementById("watchFull");
+  var openYt = document.getElementById("watchOpen");
+
+  /* === Replace with your YouTube channel ID (looks like "UCxxxxxxxx") === */
+  var CHANNEL = "REPLACE_WITH_YOUR_CHANNEL_ID";
+  var EMBED = "https://www.youtube.com/embed/live_stream?channel=" + CHANNEL + "&autoplay=1&rel=0";
+  var CHANNEL_URL = "https://www.youtube.com/channel/" + CHANNEL + "/live";
+  if (openYt) openYt.href = CHANNEL_URL;
+
+  function load(){ if (player && !player.src) player.src = EMBED; }
+  function stop(){ if (player) player.src = ""; }
+
+  document.querySelectorAll('[data-modal="watchModal"]').forEach(function(b){
+    b.addEventListener("click", load);
+    b.addEventListener("touchend", load, { passive: true });
+  });
+  modal.querySelectorAll("[data-close]").forEach(function(el){ el.addEventListener("click", stop); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape") stop(); });
+
+  if (fullBtn) fullBtn.addEventListener("click", function(){
+    var el = frame || player;
+    var req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+    if (req){ try { req.call(el); return; } catch (e){} }
+    if (player && player.webkitEnterFullscreen){ try { player.webkitEnterFullscreen(); } catch (e){} }
+  });
+})();
+
+/* Visitor registration form → auto-emails the church via Web3Forms */
+(function(){
+  var form = document.getElementById("visitForm");
+  if (!form) return;
+  var status = document.getElementById("visitStatus");
+  var btn = form.querySelector(".vf-submit");
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+    var pl = document.getElementById("vfPhone"), ph = form.querySelector('input[name="phone"]');
+    var digits = (pl ? pl.value : "").replace(/\D/g, "").replace(/^0/, "");
+    if (digits.length !== 9){ status.className = "vf-status err"; status.textContent = "Please enter a valid 9-digit Ghana number."; if (pl) pl.focus(); return; }
+    if (ph) ph.value = "+233 " + digits;
+    status.className = "vf-status"; status.textContent = "Sending…";
+    if (btn) btn.disabled = true;
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    }).then(function(r){ return r.json(); }).then(function(res){
+      if (res.success){
+        status.className = "vf-status ok";
+        status.textContent = "Thank you! We've received your details and can't wait to welcome you.";
+        form.reset();
+      } else {
+        status.className = "vf-status err";
+        status.textContent = (res && res.message) ? res.message : "Something went wrong — please try again.";
+      }
+    }).catch(function(){
+      status.className = "vf-status err";
+      status.textContent = "Network error — please check your connection and try again.";
+    }).then(function(){ if (btn) btn.disabled = false; });
+  });
+})();
+
+/* Watch button is live only during the Sunday service window (9:40–11:30 AM) */
+(function(){
+  var btns = document.querySelectorAll(".watch-btn");
+  if (!btns.length) return;
+  function upd(){
+    var now = new Date(), day = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
+    var live = (day === 0 && m >= 580 && m < 690);
+    btns.forEach(function(b){
+      b.disabled = !live;
+      b.classList.toggle("is-live", live);
+      b.setAttribute("aria-label", live ? "Watch the service live now" : "Live on Sundays, 9:40 to 11:30 AM");
+      var t = b.querySelector(".wb-text");
+      if (t) t.textContent = live ? "Watch Live" : "Watch";
+    });
+  }
+  upd();
+  setInterval(upd, 30000);
+})();
