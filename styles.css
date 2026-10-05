@@ -171,7 +171,7 @@ body.nav-open{overflow:hidden}
 .verse-band .wrap{max-width:860px}
 .verse-mark{display:block;width:40px;height:40px;margin:0 auto 1.6rem;position:relative}
 .verse-mark::before{content:"";position:absolute;inset:0;border:2px solid var(--blue);border-radius:50%;opacity:.25}
-.verse-mark::after{content:"\271D";position:absolute;inset:0;display:grid;place-items:center;color:var(--blue);font-size:1.3rem}
+.verse-mark::after{content:"\271D\FE0E";position:absolute;inset:0;display:grid;place-items:center;color:var(--blue);font-size:1.3rem;font-variant-emoji:text}
 .verse-eyebrow{justify-content:center}
 .big-verse{font-family:"Jost",sans-serif;font-weight:400;font-size:clamp(1.7rem,4.2vw,3rem);line-height:1.32;letter-spacing:-.01em;color:var(--ink);margin:1.1rem auto 1.6rem;max-width:24ch}
 .big-verse em{font-style:italic;color:var(--blue)}
@@ -220,7 +220,7 @@ body.nav-open{overflow:hidden}
 /* bento spans */
 .tile.wide{grid-column:span 2}
 .tile.tall{grid-row:span 2}
-.tile.feature{grid-column:span 2;grid-row:span 2;background:linear-gradient(165deg,rgba(14,47,143,.25),rgba(6,15,54,.68)),url("file:///Users/gershoneshun/Downloads/WhatsApp%20Image%202026-10-03%20at%2019.16.31.jpeg") center 32%/cover;color:#fff;justify-content:space-between}
+.tile.feature{grid-column:span 2;grid-row:span 2;background:linear-gradient(165deg,rgba(14,47,143,.25),rgba(6,15,54,.68)),url("images/WhatsApp%20Image%202026-10-03%20at%2019.16.31.jpeg") center 32%/cover;color:#fff;justify-content:space-between}
 .tile.feature .ico{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25)}
 .tile.feature h3{color:#fff;font-size:clamp(1.8rem,3vw,2.6rem)}
 .tile.feature p{color:rgba(233,238,255,.82);font-size:1.02rem;max-width:34ch}
@@ -305,8 +305,10 @@ body.nav-open{overflow:hidden}
 .panel:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 @media (max-width:760px){
   .split-panels{flex-direction:column;height:auto;gap:18px}
-  .panel{flex:none!important;height:380px}
-  .panel img{filter:saturate(1) brightness(.82)}
+  .panel{flex:none!important;height:auto;background:var(--ink)}
+  .panel img{position:relative;height:300px;filter:saturate(1) brightness(.92);object-position:center 20%}
+  .panel-shade{display:none}
+  .panel-body{position:relative;padding:20px 22px 24px}
   .panel p,.panel .panel-meta{opacity:1;max-height:200px;transform:none}
 }
 @media (prefers-reduced-motion:reduce){.panel,.panel img,.panel p,.panel .panel-meta{transition:none}.panel p,.panel .panel-meta{opacity:1;max-height:200px}}
@@ -338,7 +340,7 @@ body.nav-open{overflow:hidden}
 .event:hover .go{opacity:1;transform:none}
 
 /* ---------- Join ---------- */
-.join{position:relative;color:#fff;text-align:center;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.62)),url("file:///Users/gershoneshun/Downloads/IMG_9232.jpg") center/cover no-repeat;background-color:var(--ink)}
+.join{position:relative;color:#fff;text-align:center;overflow:hidden;isolation:isolate;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.62)),url("images/IMG_9232.jpg") center/cover no-repeat;background-color:var(--ink)}
 .join .orb{display:none}
 .join .orb{position:absolute;z-index:-1;filter:blur(60px);border-radius:50%}
 .join .orb.x{width:42vw;height:42vw;background:radial-gradient(circle,rgba(43,91,255,.7),transparent 70%);top:-12vw;left:-6vw;animation:drift1 20s ease-in-out infinite}
@@ -455,7 +457,7 @@ footer ul a{transition:color .3s}footer ul a:hover{color:var(--red-soft)}
 }
 @media (max-width:400px){
   .team-gallery{gap:10px}
-  .panel{height:320px}
+  .panel img{height:240px}
   .visit-map{height:300px}
   .map-dir-btn{right:10px;bottom:10px;padding:.6rem 1rem;font-size:.84rem}
   .pin-label{font-size:.66rem}
@@ -557,7 +559,10 @@ body.modal-open{overflow:hidden}
 @media (max-width:820px){
   .teams-studio{grid-template-columns:1fr;gap:20px}
   .teams-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;overflow:visible}
-  .teams-tab{min-width:0;padding:13px 15px}
+  .teams-tab{flex-direction:column;align-items:center;text-align:center;min-width:0;padding:14px 8px;gap:8px;font-size:.82rem;overflow:visible}
+  .teams-tab > span:not(.tico):not(.tnum){min-width:0;width:100%;line-height:1.2;overflow-wrap:normal}
+  .teams-tab .tico{width:34px;height:34px}
+  .teams-tab .tico svg{width:18px;height:18px}
   .teams-tab .tnum{display:none}
   .teams-tab:hover{transform:none}
 }
