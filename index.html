@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="The Church of Pentecost — West Ridge Assembly. A young, Spirit-filled family. Come as you are." />
+<meta name="theme-color" content="#060f36" />
+<title>COP West Ridge — Come as you are</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'" />
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" />
+</noscript>
+
+<link rel="icon" type="image/png" href="images/main%20fav.png" />
+<link rel="shortcut icon" href="images/main%20fav.png" />
+<link rel="apple-touch-icon" href="images/main%20fav.png" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progress" aria-hidden="true"></div>
+
+<!-- Reusable emblem symbol (approximates the COP dove-over-globe crest) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cop-emblem" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="30" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="32" cy="32" r="27" fill="none" stroke="currentColor" stroke-width="1"/>
+    <circle cx="32" cy="32" r="18" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M14 32h36M32 14v36M18 22c8 6 20 6 28 0M18 42c8-6 20-6 28 0" fill="none" stroke="currentColor" stroke-width="1"/>
+    <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+      <path d="M32 6v3M24 8l1 3M40 8l-1 3M18 13l2 2M46 13l-2 2"/>
+    </g>
+    <path d="M32 20c-4 2-8 1-10-1 3 4 1 7-2 8 4 1 6 4 6 8 1-4 4-6 6-6 2 0 5 2 6 6 0-4 2-7 6-8-3-1-5-4-2-8-2 2-6 3-10 1z" fill="currentColor" stroke="none"/>
+  </symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#home" class="brand" aria-label="Church of Pentecost West Ridge home">
+    <img class="brand-logo" src="images/WEST%20RIDGE%20LOGO.png" alt="The Church of Pentecost — West Ridge" />
+  </a>
+  <nav class="navlinks" id="navlinks" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#times">Services</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#events">Events</a>
+    <a data-modal="hymnModal" class="hymn-link" tabindex="0" style="cursor:pointer">Our Hymns</a>
+    <a href="#visit" class="btn" data-magnetic>Plan a Visit</a>
+  </nav>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span class="mt-bars"><span></span><span></span><span></span></span>
+  </button>
+  <div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <span class="orb a"></span><span class="orb b"></span><span class="orb c"></span>
+  <div class="hero-video"><iframe src="https://player.vimeo.com/video/1232582016?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;autopause=0" title="West Ridge worship" allow="autoplay; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner" id="heroInner">
+    <span class="kicker reveal in"><span class="dot"></span>The Church of Pentecost · West Ridge</span>
+    <h1 class="reveal-text" data-splittext>Real faith. Real people. <span class="grad-text">Come as you are.</span></h1>
+    <p class="sub reveal in" data-delay="2">A young, Spirit-filled family in the heart of West Ridge. No masks, no pressure — just an open door, loud worship, and a place that finally feels like home.</p>
+    <div class="hero-cta reveal in" data-delay="3">
+      <a href="#visit" class="btn" data-magnetic>Plan Your Visit</a>
+      <a href="#times" class="btn ghost">Service Times →</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section-pad" id="about">
+  <div class="wrap split">
+    <div class="about-copy">
+      <p class="eyebrow reveal">Who we are</p>
+      <h2 class="reveal-text" data-splittext>Making Jesus famous in Takoradi.</h2>
+      <p class="reveal about-tag" data-delay="2">An Assembly of The Church of Pentecost in the Western Region, Takoradi Area.</p>
+      <p class="reveal" data-delay="2">We are an Assembly of The Church of Pentecost dedicated to making Jesus famous by spreading the unadulterated Gospel of Christ Jesus.</p>
+      <div class="about-points">
+        <div class="point reveal" data-delay="2"><h3>Our Belief</h3><p>We hold to the Tenets of The Church of Pentecost.</p><button class="link-btn" data-modal="tenets">Read all the Tenets →</button></div>
+        <div class="point reveal" data-delay="3"><h3>Our Leadership</h3><p>Our Pastor, Elders, Deacons and Deaconesses. <span class="soon">Full list coming soon.</span></p></div>
+        <div class="point reveal" data-delay="4"><h3>When You Visit</h3><p>A family of faith that grows in the Lord.</p></div>
+      </div>
+    </div>
+    <div class="about-visual reveal" data-delay="1">
+      <img class="pastor-photo" src="images/WhatsApp%20Image%202026-09-29%20at%2023.18.16.jpeg" alt="Pastor John Viscount Arkoh, Presiding Pastor — The Church of Pentecost, West Ridge" />
+      <div class="pastor-caption"><strong>Pastor John Viscount Arkoh</strong><span>Presiding Pastor · The Church of Pentecost — West Ridge</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE TIMES ============ -->
+<section class="section-pad" id="times" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Gather with us</p>
+      <h2 class="reveal-text" data-splittext>When we meet</h2>
+      <p class="lead">Gatherings right through the week. Come early — there's always a warm welcome, and someone will save you a seat.</p>
+    </div>
+    <div class="times">
+      <div class="time-card reveal" data-delay="1"><span class="svc-status" data-day="0" data-start="420" data-end="540"></span><div class="svc-top"><span class="day">Sunday</span><span class="svc-tag english">English</span></div><div class="hour range">7:00 AM &ndash; 9:00 AM</div><p>Morning worship, teaching, and Holy Communion.</p></div>
+      <div class="time-card reveal" data-delay="2"><span class="svc-status" data-day="0" data-start="580" data-end="690"></span><div class="svc-top"><span class="day">Sunday</span><span class="svc-tag akan">Akan</span></div><div class="hour range">9:40 AM &ndash; 11:30 AM</div><p>Youth &amp; family service with live band and kids' church.</p></div>
+      <div class="time-card reveal week-card" data-delay="3">
+        <div class="svc-top"><span class="day">Through the week</span></div>
+        <ul class="week-list">
+          <li><span class="wk-day">Wed</span><span class="wk-name">Fahansa</span><span class="wk-time">7:00 &ndash; 9:00 AM</span><span class="svc-status inline" data-day="3" data-start="420" data-end="540"></span></li>
+          <li><span class="wk-day">Fri</span><span class="wk-name">Awurade Wosem</span><span class="wk-time">7:00 &ndash; 9:00 AM</span><span class="svc-status inline" data-day="5" data-start="420" data-end="540"></span></li>
+          <li><span class="wk-day">Sat</span><span class="wk-name">Encounter Hour</span><span class="wk-time">6:00 &ndash; 7:30 PM</span><span class="svc-status inline" data-day="6" data-start="1080" data-end="1170"></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORD / SCRIPTURE ============ -->
+<section class="section-pad verse-band" id="word">
+  <div class="wrap">
+    <span class="verse-mark reveal" aria-hidden="true"></span>
+    <p class="eyebrow verse-eyebrow reveal">A word for you</p>
+    <blockquote class="big-verse reveal" data-delay="1" id="verseText">&ldquo;I was glad when they said to me, Let us go to the house of the Lord.&rdquo;</blockquote>
+    <p class="verse-ref reveal" data-delay="2" id="verseRef">Psalm 122:1</p>
+  </div>
+</section>
+
+<!-- ============ BENTO MINISTRIES ============ -->
+<section class="section-pad ministries" id="ministries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Get involved</p>
+      <h2 class="reveal-text" data-splittext>Find your people</h2>
+      <p class="lead">However you're wired, there's a way to belong, grow, and serve. Pick a lane and jump in.</p>
+    </div>
+    <div class="bento">
+      <div class="tile feature reveal" data-delay="1" data-tilt data-modal="pensaGallery" role="button" tabindex="0" aria-label="Open the PENSA and Youth gallery">
+        <img class="emblem-mini" src="images/WEST%20RIDGE%20LOGO.png" alt="" aria-hidden="true" />
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <div><h3>PENSA & Youth Worship</h3><p>Loud, honest, Spirit-led worship built for students and young adults. This is where the West Ridge story is being written.</p></div>
+      </div>
+      <div class="tile photo reveal" data-delay="2" data-tilt data-modal="kidsGallery" role="button" tabindex="0" aria-label="Open the Kids and Family gallery" style="--img:url('images/Young%20Girl%20Performing%20on%20a%20Colorful%20Stage.png')"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7" r="3.2"/><path d="M2.5 21v-2a4 4 0 0 1 4-4h3a4 4 0 0 1 4 4v2"/><circle cx="17.5" cy="9.5" r="2.2"/><path d="M14.5 21v-1.6a3 3 0 0 1 3-3a3 3 0 0 1 3 3V21"/></svg></div><h3>Kids & Family</h3><p>Safe, joyful spaces where children meet Jesus through play and story.</p></div>
+      <div class="tile accent photo reveal" data-delay="3" data-tilt data-modal="outreachGallery" role="button" tabindex="0" aria-label="Open the Outreach gallery" style="--img:url('images/WhatsApp%20Image%202026-10-03%20at%2018.18.19.jpeg')"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div><h3>Outreach</h3><p>Loving West Ridge in real ways — food drives, hospital visits, missions.</p></div>
+      <div class="tile wide photo reveal" data-delay="2" data-tilt data-modal="cellsGallery" role="button" tabindex="0" aria-label="Open the Life Together gallery" style="--img:url('images/WhatsApp%20Image%202026-10-03%20at%2019.31.27.jpeg')"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v20"/><path d="M4 2v6a3 3 0 0 0 6 0V2"/><path d="M17 2c-1.8 0-3 2.5-3 6s1.2 4 3 4v10"/></svg></div><h3>Life Together</h3><p>Cooking, shared meals, and real friendship — the moments between services where our church family grows close.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRESIDING ELDER ============ -->
+<section class="section-pad elder" id="elder">
+  <span class="e-orb" aria-hidden="true"></span>
+  <div class="wrap elder-grid">
+    <figure class="elder-photo reveal">
+      <div class="elder-frame">
+        <img src="images/WhatsApp%20Image%202026-09-29%20at%2023.27.16.jpeg" alt="Elder Kofi Nyarko Adepa Sam, Presiding Elder — The Church of Pentecost, West Ridge" />
+      </div>
+      <span class="elder-badge">Presiding Elder</span>
+    </figure>
+    <div class="elder-copy">
+      <p class="eyebrow reveal" style="color:var(--blue-bright)">Our Leadership</p>
+      <h2 class="reveal-text" data-splittext>A word from our Presiding Elder</h2>
+      <blockquote class="elder-quote reveal" data-delay="2">On behalf of the West Ridge Assembly, you are warmly welcome. Whether you're visiting for the first time or returning home, our prayer is that you meet the presence of God and find a family here.</blockquote>
+      <p class="reveal" data-delay="2">We would love to worship with you this Sunday — come as you are, and let's grow in the Lord together.</p>
+      <div class="elder-sign reveal" data-delay="3"><strong>Elder Kofi Nyarko Adepa Sam</strong><span>Presiding Elder · The Church of Pentecost — West Ridge</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FELLOWSHIPS ============ -->
+<section class="section-pad fellowship" id="fellowships">
+  <div class="wrap">
+    <div class="section-head fellow-head reveal">
+      <p class="eyebrow">Our fellowships</p>
+      <h2 class="reveal-text" data-splittext>The men and women of West Ridge</h2>
+      <p class="lead">Two families within the family, raising godly men and women devoted to Christ. Click or tap a panel to step inside.</p>
+    </div>
+  </div>
+  <div class="split-panels reveal">
+    <article class="panel" tabindex="0" style="--accent:#e5142b">
+      <img src="images/IMG_1153.JPG" alt="West Ridge Women's Ministry Leadership" />
+      <span class="panel-shade"></span>
+      <div class="panel-body">
+        <span class="panel-kicker">Women's Ministry</span>
+        <h3>Holiness unto the Lord</h3>
+        <p>The mothers and sisters devoted to prayer, holiness, and nurturing families and the church. Pictured at the 2024 Women's Week Celebration.</p>
+        <span class="panel-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Meets the last Tuesday of every month</span>
+      </div>
+    </article>
+    <article class="panel" tabindex="0" style="--accent:#2b5bff">
+      <img src="images/Church%20Leadership%20in%20Blue.png" alt="West Ridge Men's Fellowship, PEMEM" />
+      <span class="panel-shade"></span>
+      <div class="panel-body">
+        <span class="panel-kicker">Men's Fellowship · PEMEM</span>
+        <h3>Men of valour for the Kingdom</h3>
+        <p>Brothers and fathers standing firm in faith, service, and godly leadership, at home and in the house of God.</p>
+        <span class="panel-meta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Meets the last Thursday of every month</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SERVING TEAMS ============ -->
+<section class="section-pad teams" id="teams">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Hands that serve</p>
+      <h2 class="reveal-text" data-splittext>The teams behind every service</h2>
+      <p class="lead">Every Sunday is carried by people serving quietly and faithfully. Choose a team to step behind the scenes.</p>
+    </div>
+
+    <div class="teams-studio reveal">
+      <div class="teams-tabs" role="tablist" aria-label="Serving teams">
+        <button class="teams-tab is-active" type="button" role="tab" aria-selected="true" data-team="media" style="--accent:#2b5bff">
+          <span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>
+          <span>Media</span><span class="tnum">01</span>
+        </button>
+        <button class="teams-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-team="choir" style="--accent:#e5142b">
+          <span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4M8 23h8"/></svg></span>
+          <span>Choir</span><span class="tnum">02</span>
+        </button>
+        <button class="teams-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-team="instruments" style="--accent:#0e2f8f">
+          <span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span>
+          <span>Instrumentalists</span><span class="tnum">03</span>
+        </button>
+        <button class="teams-tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-team="protocol" style="--accent:#5b6b8c">
+          <span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M16 11l2 2 4-4"/></svg></span>
+          <span>Protocol</span><span class="tnum">04</span>
+        </button>
+      </div>
+
+      <div class="teams-stage">
+        <article class="team-panel is-active" role="tabpanel" data-team="media" style="--accent:#2b5bff">
+          <div class="team-head"><span class="tkick">01 — Media</span><h3>Carrying the service beyond the walls</h3><p>Sound, cameras, live streaming, and screens — so every word, song, and moment reaches both the room and the world watching from home.</p></div>
+          <div class="team-badges"><span>Live Stream</span><span>Sound</span><span>Cameras</span><span>Slides</span></div>
+          <div class="team-gallery">
+            <figure class="team-shot"><img src="images/media%20team/IMG_2466.jpg" alt="The West Ridge media team" /></figure>
+          </div>
+        </article>
+
+        <article class="team-panel" role="tabpanel" data-team="choir" style="--accent:#e5142b">
+          <div class="team-head"><span class="tkick">02 — Choir</span><h3>Lifting heaven's song</h3><p>Voices joined as one, leading the congregation into worship with psalms, hymns, and spiritual songs that make room for God's presence.</p></div>
+          <div class="team-badges"><span>Praise</span><span>Worship</span><span>Harmony</span></div>
+          <div class="team-gallery">
+            <figure class="team-shot"><img src="images/IMG_1146.JPG" alt="The West Ridge Assembly choir" /></figure>
+          </div>
+        </article>
+
+        <article class="team-panel" role="tabpanel" data-team="instruments" style="--accent:#0e2f8f">
+          <div class="team-head"><span class="tkick">03 — Instrumentalists</span><h3>The sound behind the worship</h3><p>Keys, drums, bass, and guitar — the heartbeat that carries every song and sets the atmosphere for the congregation to encounter God.</p></div>
+          <div class="team-badges"><span>Keys</span><span>Drums</span><span>Bass</span><span>Guitar</span></div>
+          <div class="team-gallery">
+            <figure class="team-shot"><img src="images/instrumentalist/IMG_1148.JPG" alt="The West Ridge instrumentalists" /></figure>
+          </div>
+        </article>
+
+        <article class="team-panel" role="tabpanel" data-team="protocol" style="--accent:#5b6b8c">
+          <div class="team-head"><span class="tkick">04 — Protocol</span><h3>Order and a warm welcome</h3><p>Ushering, seating, and hospitality — making sure every service runs with excellence and every person who walks in feels seen and at home.</p></div>
+          <div class="team-badges"><span>Ushering</span><span>Hospitality</span><span>Order</span></div>
+          <div class="team-gallery">
+            <figure class="team-shot"><img src="images/protocol%20team/IMG_1144.JPG" alt="The West Ridge protocol team" /></figure>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUB-GROUPS ============ -->
+<section class="groups" id="groups">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Ministries &amp; groups</p>
+      <h2 class="reveal-text" data-splittext>One church, many families</h2>
+    </div>
+  </div>
+  <div class="logo-marquee">
+    <div class="logo-track">
+      <button class="logo-item" type="button" aria-label="Youth Arise and Shine"><img src="images/Youth%20Arise%20%26%20Shine%20Emblem.png" alt="Youth Arise and Shine" /></button>
+      <button class="logo-item" type="button" aria-label="West Ridge Media"><img src="images/West%20Ridge%20Media%20Logo.png" alt="West Ridge Media" /></button>
+      <button class="logo-item" type="button" aria-label="Women's Ministry"><img src="images/Women%E2%80%99s%20Ministry%20World%20Seal.png" alt="Women's Ministry World Seal" /></button>
+      <button class="logo-item" type="button" aria-label="PEMEM Men's Ministry"><img src="images/PEMEM%20Church%20Ministry%20Emblem.png" alt="PEMEM Church Ministry" /></button>
+      <button class="logo-item" type="button" aria-hidden="true" tabindex="-1"><img src="images/Youth%20Arise%20%26%20Shine%20Emblem.png" alt="" /></button>
+      <button class="logo-item" type="button" aria-hidden="true" tabindex="-1"><img src="images/West%20Ridge%20Media%20Logo.png" alt="" /></button>
+      <button class="logo-item" type="button" aria-hidden="true" tabindex="-1"><img src="images/Women%E2%80%99s%20Ministry%20World%20Seal.png" alt="" /></button>
+      <button class="logo-item" type="button" aria-hidden="true" tabindex="-1"><img src="images/PEMEM%20Church%20Ministry%20Emblem.png" alt="" /></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section class="section-pad" id="events" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What's coming up</p>
+      <h2 class="reveal-text" data-splittext>Upcoming events</h2>
+    </div>
+    <div class="event-list">
+      <a class="event reveal" data-delay="1" href="#visit"><div class="date"><div class="d">17</div><div class="m">Nov</div></div><div class="info"><h3>Breaking Barriers Conference</h3><p>17&ndash;22 November · a week of breakthrough — nightly worship, the Word, and prayer.</p></div><span class="go"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="event reveal" data-delay="2" href="#visit"><div class="date"><div class="d">16</div><div class="m">Dec</div></div><div class="info"><h3>Christmas Convention</h3><p>16&ndash;20 December · celebrating the birth of Christ together as one family.</p></div><span class="go"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="event reveal" data-delay="3" href="#visit"><div class="date"><div class="d">31</div><div class="m">Dec</div></div><div class="info"><h3>31st Night Service</h3><p>Cross over into the new year in worship, thanksgiving, and prayer.</p></div><span class="go"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOIN ============ -->
+<section class="section-pad join" id="visit">
+  <span class="orb x"></span><span class="orb y"></span>
+  <div class="wrap">
+    <div class="visit-grid">
+      <div class="visit-copy">
+        <p class="eyebrow reveal" style="color:#e9eeff">Your first Sunday</p>
+        <h2 class="reveal-text" data-splittext>We saved you a seat.</h2>
+        <p class="visit-lead reveal" data-delay="2">Tell us you're coming and someone from the team will meet you at the door, walk you in, and help you feel right at home. When you're ready, tap for live, turn-by-turn directions straight from wherever you are.</p>
+        <div class="visit-address reveal" data-delay="2">
+          <span class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h4>The Church of Pentecost — West Ridge Assembly</h4>
+            <p class="ad">West Ridge, Takoradi · Western Region, Ghana</p>
+            <p class="pc">Plus Code W65G+4QV · Takoradi</p>
+          </div>
+        </div>
+        <div class="visit-actions reveal" data-delay="3">
+          <a class="btn" data-magnetic href="https://www.google.com/maps/dir/?api=1&destination=The%20Church%20of%20Pentecost%20West%20Ridge%20Assembly%2C%20Takoradi&destination_place_id=ChIJO9GLC-p55w8Rj0NIPsGxHj0" target="_blank" rel="noopener">Get Live Directions</a>
+          <a class="btn ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJO9GLC-p55w8Rj0NIPsGxHj0" target="_blank" rel="noopener">Open in Google Maps →</a>
+        </div>
+      </div>
+      <a class="visit-map reveal" data-delay="2" href="https://www.google.com/maps/dir/?api=1&destination=The%20Church%20of%20Pentecost%20West%20Ridge%20Assembly%2C%20Takoradi&destination_place_id=ChIJO9GLC-p55w8Rj0NIPsGxHj0" target="_blank" rel="noopener" aria-label="Open live directions to The Church of Pentecost West Ridge Assembly">
+        <span class="map-bar"><span class="live-dot"></span>Live map · West Ridge Assembly</span>
+        <span class="map-canvas"><svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect class="m-bg" x="0" y="0" width="400" height="300"/>
+          <path class="m-water" d="M0 248 L130 300 L0 300 Z"/>
+          <rect class="m-park" x="22" y="28" width="92" height="66" rx="10"/>
+          <rect class="m-block" x="150" y="38" width="60" height="40" rx="6"/>
+          <rect class="m-block" x="250" y="58" width="72" height="46" rx="6"/>
+          <rect class="m-block" x="300" y="150" width="66" height="56" rx="6"/>
+          <rect class="m-block" x="58" y="150" width="72" height="40" rx="6"/>
+          <rect class="m-block" x="168" y="198" width="82" height="50" rx="6"/>
+          <g class="m-road-case" stroke-width="17"><path d="M-10 120 C 120 90, 280 150, 410 110"/><path d="M200 -10 L 200 310"/></g>
+          <g class="m-road-main" stroke-width="12"><path d="M-10 120 C 120 90, 280 150, 410 110"/><path d="M200 -10 L 200 310"/></g>
+          <g class="m-road-case" stroke-width="10"><path d="M40 -10 L 58 310"/><path d="M-10 222 L 410 242"/><path d="M322 -10 L 300 310"/></g>
+          <g class="m-road" stroke-width="6"><path d="M40 -10 L 58 310"/><path d="M-10 222 L 410 242"/><path d="M322 -10 L 300 310"/></g>
+        </svg></span>
+        <span class="map-compass">N</span>
+        <span class="map-pin"><span class="pin-pulse"></span><svg class="pin-ico" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.6" fill="#fff"/></svg><span class="pin-label">West Ridge Assembly</span></span>
+        <span class="map-scale"><i></i>500 m</span>
+        <span class="map-dir-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>Directions</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="brand" aria-label="COP West Ridge home">
+          <img class="brand-logo" src="images/WEST%20RIDGE%20LOGO.png" alt="The Church of Pentecost — West Ridge" />
+        </a>
+        <p style="margin-top:1rem">The Church of Pentecost — West Ridge Assembly. A young, Spirit-filled family with an open door.</p>
+        <div class="socials">
+          <a href="https://www.facebook.com/share/1C8RmAixEf/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/cop_west_ridge?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/@copwestridge?_r=1&amp;_t=ZS-9AHlXeG4Nrs" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.8 4 4 4.3V11c-1.5 0-2.9-.5-4-1.3V16a5.5 5.5 0 1 1-5.5-5.5c.3 0 .6 0 .9.1v3.2a2.4 2.4 0 1 0 1.6 2.2V3z"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="#about">About Us</a></li><li><a href="#times">Service Times</a></li><li><a href="#ministries">Ministries</a></li><li><a href="#events">Events</a></li></ul></div>
+      <div><h4>Visit</h4><ul><li>West Ridge Assembly</li><li>Takoradi, Ghana</li><li><a href="tel:+233277029860">027 702 9860</a></li><li><a href="tel:+233243075088">024 307 5088</a></li><li><a href="mailto:hello@copwestridge.org">hello@copwestridge.org</a></li></ul></div>
+      <div>
+        <h4>Stay Connected</h4>
+        <p>Get service reminders and event updates straight to your inbox.</p>
+        <form class="subscribe" id="subForm"><input type="email" placeholder="Your email" aria-label="Email address" required /><button class="btn" type="submit" data-magnetic>Join</button></form>
+        <p id="subMsg" style="margin-top:.7rem;color:var(--red-soft);font-size:.85rem;min-height:1.2em"></p>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year"></span> The Church of Pentecost — West Ridge. All are welcome here.</span><span>Made by Codex</span></div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<!-- ============ TENETS MODAL ============ -->
+<div class="modal" id="tenets" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="tenets-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">What we believe</p>
+      <h2 id="tenets-title">The Tenets of The Church of Pentecost</h2>
+      <p class="modal-verse">"That all may be rooted and built up in him, strengthened in the faith as they were taught and overflowing with thanksgiving." — Colossians 2:7</p>
+    </div>
+    <div class="modal-body">
+      <article><h3>1. The Bible</h3><p>We believe in the divine inspiration and authority of the Holy Scriptures. That the Bible is infallible in its declaration, final in its authority, all-sufficient in its provisions, and comprehensive in its sufficiency (2 Timothy 3:16; 2 Peter 1:21).</p></article>
+      <article><h3>2. One True God</h3><p>We believe in the existence of the One True God, Elohim, Maker of the whole universe; indefinable, but revealed as Triune Godhead – Father, Son, and Holy Spirit – one in nature, essence and attributes; Omnipotent, Omniscient and Omnipresent (Genesis 1:1; Matthew 3:16-17; 2 Corinthians 13:14; Matthew 28:19; Genesis 1:26).</p></article>
+      <article><h3>3. Man's Depraved Nature</h3><p>We believe that "all men have sinned and come short of the glory of God;" are subject to eternal punishment; and need repentance and regeneration (Genesis 3:1-19; Isaiah 53:6).</p></article>
+      <article><h3>4. The Saviour</h3><p>We believe humanity's need of a Saviour has been met in the person of Jesus Christ (Matthew 1:21; John 4:42; Acts 2:36; Ephesians 5:23; Philippians 2:6-11), because of His Deity, Virgin Birth, Atoning death, Resurrection and Ascension, His Abiding Intercession (Romans 8:34; Hebrews 7:25) and His second coming to judge the living and the dead (Acts 1:11; Acts 10:42; 1 Thessalonians 4:16-18; 2 Timothy 4:1; Revelation 22:12, 20).</p></article>
+      <article><h3>5. Repentance, Justification and Sanctification</h3><p>We believe all humans have to repent and confess their sins before God (Luke 15:7; Acts 2:38; Acts 3:19; Acts 17:30), and believe in the vicarious death of Jesus Christ before they can be justified before God (Romans 4:25; 5:1). We believe in the sanctification of the believer through the working of the Holy Spirit (1 Corinthians 1:30; 6:11) and God's gift of eternal life to the believer (John 17:2, 3; John 10:27, 28; Romans 6:23b; 1 John 5:11-13).</p></article>
+      <article><h3>6. The Ordinances of Baptism and the Lord's Supper</h3><p>We believe in the ordinance of baptism by immersion as a testimony of a convert who has attained a responsible age of 13 years (Matthew 3:16; Matthew 28:19; Mark 1:9,10; Mark 16:16; Acts 2:38). Infants and children are not baptized but are dedicated to the Lord (Mark 10:13-16; Luke 2:22-24, 34). We believe in the ordinance of the Lord's Supper or Holy Communion, which should be partaken by all members who are in full fellowship (Luke 22:19, 20; Acts 20:7; 1 Corinthians 11:23-33).</p></article>
+      <article><h3>7. Baptism, Gifts and Fruit of the Holy Spirit</h3><p>We believe in the Baptism of the Holy Spirit for all believers with the initial evidence of speaking in tongues (Joel 2:28, 29; Acts 2:3,4,38,39; Acts 10:44-46; Acts 19:16), and in the operation of the gifts and fruit of the Holy Spirit (Romans 12:6-8; Galatians 5:22,23; 1 Corinthians 12:8-11; 28-30).</p></article>
+      <article><h3>8. Divine Healing</h3><p>We believe that the healing of sicknesses and diseases is provided for God's people in the atonement (Isaiah 53:4,5; Matthew 8:7-13; 16,17; Mark 16:17,18; Luke 13:10-16; Acts 10:38; James 5:14-16). However, the Church is not opposed to medication by qualified medical practitioners.</p></article>
+      <article><h3>9. Tithes and Offerings</h3><p>We believe in tithing and in the giving of freewill offerings towards the furtherance of the cause of the Kingdom of God. We believe that God blesses a cheerful giver (Genesis 14:18-20; Malachi 3:6-10; Matthew 23:23; Acts 20:35; Hebrews 7:1-4; 1 Corinthians 16:1, 2; 2 Corinthians 9:1-9).</p></article>
+      <article><h3>10. The Second Coming and the Next Life</h3><p>We believe in the second coming of Christ and the resurrection of the dead, both the saved and the unsaved. They that are saved to the resurrection of life and the unsaved to the resurrection of damnation (Daniel 12:2; Mark 13:26; John 5:28, 29; Acts 1:11; Acts 10:42; Romans 2:7-11; Romans 6:23).</p></article>
+      <article><h3>11. Marriage and Family Life</h3><p>We believe in the institution of marriage as a union established and ordained by God for the lifelong, intimate relationship between a man as husband and a woman as wife as biologically defined at birth. We believe that God instituted marriage primarily for mutual help, fellowship and comfort that one ought to have for the other and for the honourable procreation of children, and their training in love, obedience to the Lord and responsible citizenship (Genesis 2:18, 21-25; Matthew 19:4-6; 1 Corinthians 7:1-2).</p></article>
+    </div>
+  </div>
+</div>
+
+<!-- ============ OUTREACH GALLERY MODAL ============ -->
+<div class="modal" id="outreachGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="outreach-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel gallery-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">Outreach</p>
+      <h2 id="outreach-title">Loving our city</h2>
+      <p class="modal-verse">Food drives, hospital visits, and missions across West Ridge.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="images/WhatsApp%20Image%202026-10-03%20at%2018.18.19.jpeg" alt="Outreach visit with a gift" /></figure>
+    </div>
+  </div>
+</div>
+
+<!-- ============ KIDS & FAMILY GALLERY MODAL ============ -->
+<div class="modal" id="kidsGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="kids-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel gallery-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">Kids & Family</p>
+      <h2 id="kids-title">Where children meet Jesus</h2>
+      <p class="modal-verse">Safe, joyful spaces full of play, story, and song.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="images/Young%20Girl%20Performing%20on%20a%20Colorful%20Stage.png" alt="Child performing on a colourful stage" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.38.57.png" alt="Children at Kids &amp; Family service" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.39.25.png" alt="Kids worship and play" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.39.49.png" alt="Children learning a Bible story" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.40.16.png" alt="Kids &amp; Family moment at West Ridge" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.40.41.png" alt="Children's church gathering" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.44.18.png" alt="Families together at West Ridge" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/kids%20%26%20Family/Screenshot%202026-10-04%20at%2021.45.29.png" alt="Joyful kids at church" loading="lazy" /></figure>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HOME FELLOWSHIPS GALLERY MODAL ============ -->
+<div class="modal" id="cellsGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cells-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel gallery-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">Life Together</p>
+      <h2 id="cells-title">Doing life as a family</h2>
+      <p class="modal-verse">Cooking, sharing meals, and bonding beyond Sunday — the heart of our church family.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="images/WhatsApp%20Image%202026-10-03%20at%2019.31.27.jpeg" alt="Home fellowship serving together" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/moment/WhatsApp%20Image%202026-10-03%20at%2019.31.26.jpeg" alt="Church family cooking and bonding" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/moment/WhatsApp%20Image%202026-10-03%20at%2019.31.26%20(1).jpeg" alt="Sharing a meal together" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/moment/WhatsApp%20Image%202026-10-03%20at%2019.31.27.jpeg" alt="Fellowship over food" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/moment/WhatsApp%20Image%202026-10-03%20at%2019.31.27%20(1).jpeg" alt="Time together as a family" loading="lazy" /></figure>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PENSA GALLERY MODAL ============ -->
+<div class="modal" id="pensaGallery" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pensa-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel gallery-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">PENSA &amp; Youth</p>
+      <h2 id="pensa-title">Arise &amp; shine</h2>
+      <p class="modal-verse">Moments from our youth ministry in worship and celebration.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item"><img src="images/WhatsApp%20Image%202026-10-03%20at%2019.16.31.jpeg" alt="Youth at National Youth Week" /></figure>
+      <figure class="gallery-item"><img src="images/Young%20Girl%20Performing%20on%20a%20Colorful%20Stage.png" alt="Children performing on stage" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.28.06.png" alt="PENSA &amp; Youth at National Youth Week" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.28.43.png" alt="Young worshippers in Arise &amp; Shine cloth" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.29.10.png" alt="PENSA member at Youth Week celebration" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.29.36.png" alt="Youth ministry fellowship" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.30.11.png" alt="Young adults at West Ridge" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.30.39.png" alt="PENSA &amp; Youth gathering" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.41.41.png" alt="Youth Week outdoors" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.42.05.png" alt="PENSA member at National Youth Week" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.42.25.png" alt="Young worshipper smiling" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.43.56.png" alt="PENSA &amp; Youth celebration" loading="lazy" /></figure>
+      <figure class="gallery-item"><img src="images/pentecost/youth/Screenshot%202026-10-04%20at%2021.44.53.png" alt="Youth ministry at West Ridge" loading="lazy" /></figure>
+    </div>
+  </div>
+</div>
+
+<!-- ============ OUR HYMNS (SONGBOOK PDF) MODAL ============ -->
+<div class="modal" id="hymnModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="hymn-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel hymn-panel">
+    <button class="modal-close" data-close aria-label="Close">&times;</button>
+    <div class="modal-head">
+      <p class="eyebrow">Our Hymns</p>
+      <h2 id="hymn-title">The Church of Pentecost Songbook</h2>
+      <p class="modal-verse">Preview the full hymnbook below, or download your own copy to keep.</p>
+    </div>
+    <div class="hymn-actions">
+      <a class="btn" href="COP-SONGSBOOK.pdf" target="_blank" rel="noopener">Open / Preview</a>
+      <a class="btn hymn-outline" href="COP-SONGSBOOK.pdf" download="COP-West-Ridge-Songbook.pdf">Download PDF</a>
+    </div>
+    <a class="hymn-cover" href="COP-SONGSBOOK.pdf" target="_blank" rel="noopener" aria-label="Open the songbook PDF">
+      <span class="hymn-cover-inner">
+        <span class="hymn-cover-cross">&#10013;</span>
+        <span class="hymn-cover-k">THE CHURCH OF PENTECOST</span>
+        <span class="hymn-cover-t">Hymns &amp; Songs</span>
+        <span class="hymn-cover-s">West Ridge Assembly</span>
+        <span class="hymn-cover-cta">Tap to open the full songbook &rarr;</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<div id="toast" class="toast" role="status" aria-live="polite">
+  <span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+  <span class="t-txt"><strong>Thank you for joining!</strong><span class="t-sub">You're on the West Ridge family list — see you Sunday.</span></span>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
