@@ -219,3 +219,35 @@
     timer = setTimeout(function(){ toast.classList.remove("show"); }, 4200);
   });
 })();
+
+/* Songbook PDF: open & download that survive sandboxes and hosting alike */
+(function(){
+  function openPdf(url){
+    var w = window.open(url, "_blank");
+    if (w) return;                     // normal case (hosted / local): clean URL
+    fetch(url).then(function(r){ return r.blob(); }).then(function(b){
+      var o = URL.createObjectURL(b);
+      var w2 = window.open(o, "_blank");
+      if (!w2) window.location.href = o;
+      setTimeout(function(){ URL.revokeObjectURL(o); }, 60000);
+    }).catch(function(){ window.location.href = url; });
+  }
+  function downloadPdf(url, name){
+    fetch(url).then(function(r){ return r.blob(); }).then(function(b){
+      var o = URL.createObjectURL(b), t = document.createElement("a");
+      t.href = o; t.download = name || "songbook.pdf";
+      document.body.appendChild(t); t.click(); t.remove();
+      setTimeout(function(){ URL.revokeObjectURL(o); }, 60000);
+    }).catch(function(){
+      var t = document.createElement("a");
+      t.href = url; t.download = name || "songbook.pdf";
+      document.body.appendChild(t); t.click(); t.remove();
+    });
+  }
+  document.querySelectorAll("a.hymn-cover, .hymn-actions a:not([download])").forEach(function(a){
+    a.addEventListener("click", function(e){ e.preventDefault(); openPdf(a.getAttribute("href")); });
+  });
+  document.querySelectorAll(".hymn-actions a[download]").forEach(function(a){
+    a.addEventListener("click", function(e){ e.preventDefault(); downloadPdf(a.getAttribute("href"), a.getAttribute("download")); });
+  });
+})();
